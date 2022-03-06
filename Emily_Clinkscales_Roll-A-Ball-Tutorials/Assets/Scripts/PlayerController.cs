@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public AudioSource Collect;
     //floatie boys
     public float speed = 0;
     private float movementX;
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
+            Collect.Play();
             //Add to that count!
             count = count + 1;
             SetCountText();

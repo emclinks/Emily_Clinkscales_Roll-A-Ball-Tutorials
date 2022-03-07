@@ -45,16 +45,10 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(movement * speed);
     }
 
-    void OnTriggerEnter(Collider other)
+    public void PlanetEaten()
     {
-        if (other.gameObject.CompareTag("PickUp"))
-        {
-            other.gameObject.SetActive(false);
-            Collect.Play();
-            //Add to that count!
-            count = count + 1;
-            SetCountText();
-        }
+        count = count + 1;
+        SetCountText();
     }
 
     void SetCountText()

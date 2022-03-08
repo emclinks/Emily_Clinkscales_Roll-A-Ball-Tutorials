@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PickUp
   - Subspace
+  - Planet
   layers:
   - Default
   - TransparentFX
